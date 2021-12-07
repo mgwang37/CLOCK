@@ -1,59 +1,38 @@
+`timescale 1ns/1ps
+
 module CLOCK
 (
-	input         resn,
-	input [15:0]  target,
-	input         clk,
-	output reg    lock,
-	output [1:0]  status,
-	output        out
+	input         resetn,
+
+	input         ref_clk,
+	input [31:0]  ref_counter,
+
+	input [ 8:0]  init,
+	input [31:0]  counter,
+	output        out,
+
+	output [2:0]  status
 );
-	reg           [1:0] ctl;
-	reg [15:0]          counter;
-	reg [1:0]           clk_reg;
 
-	reg [1:0]           lock_log;
-
-	always @(posedge out)
-	begin
-		clk_reg <= {clk_reg[0], clk};
-	end
+	wire [511:0] en;
 
 	oscillator osc
 	(
-		.resn(resn),
-		.ctl(ctl),
-		.status(status),
+		.resetn(resetn),
+		.en(en),
 		.out(out)
 	);
 
-	always @(posedge out or negedge resn)
-	begin
-		if (!resn)begin
-			counter <= 0;
-			ctl <= 0;
-			lock <=0;
-			lock_log <=0;
-		end else if(clk_reg[1]) begin
-			counter <= counter + 1;
-		end else begin
-			counter <= 0;
-			if (counter>0)begin
-				if (counter > target)begin
-					ctl <= 3;
-				end else if(counter < target) begin
-					ctl <= 2;
-				end else begin
-					lock <= 1;
-				end
-				lock_log <= {lock_log[1], ctl[0]};
-				if (^lock_log[1:0])begin
-					lock <= 1;
-				end
-			end else begin
-				ctl <= 0;
-			end
-		end
-	end
-
+	clock_ctl ctl
+	(
+		.resetn(resetn),
+		.ref_clk(ref_clk),
+		.ref_counter(ref_counter),
+		.init(init),
+		.counter(counter),
+		.clk(out),
+		.status(status),
+		.en(en)
+	);
 
 endmodule

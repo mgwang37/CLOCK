@@ -1,0 +1,2 @@
+
+instance {top.clock.ctl.\ref_clk_reg_reg[0]}  {noTiming};
