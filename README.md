@@ -11,10 +11,10 @@ module CLOCK
     output        out        //时钟输出
 );
 
-##参数计算
+## 参数计算
 target=clk周期/（out周期*2）
 
-##操作时序
+## 操作时序
 
 输入clk时钟
 输入target
