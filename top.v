@@ -25,13 +25,15 @@ module top;
 	);
 
 	initial begin
-		target_clock = 8000;
+		target_clock = 5000;
 		ref_counter  = 10;
 		init = 20;
 		clk = 0;
 		resetn = 0;
 		#100000;
 		resetn = 1;
+		@(status[2] |status[1])
+		$stop;
 	end
 
 endmodule
