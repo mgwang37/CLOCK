@@ -1,2 +1,2 @@
 
-instance {top.clock.ctl.\ref_clk_reg_reg[0]}  {noTiming};
+instance {top.clock.ctl.pcount.\out_reg_ok_reg[0]}  {noTiming};

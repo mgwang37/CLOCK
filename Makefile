@@ -1,8 +1,10 @@
-all:
-	vcs  -LDFLAGS -Wl,--no-as-needed -debug_access+r -f file_list.f +lint=PCWM -v2005 
-	#vcs  -sdf typ:top.clock:ss.sdf -LDFLAGS -Wl,--no-as-needed -debug_access+r -f list.f +lint=PCWM -v2005 +optconfigfile+async.list
-	#vcs  -sdf min:top.clock:ss.sdf -LDFLAGS -Wl,--no-as-needed -debug_access+r -f list.f +lint=PCWM -v2005 +optconfigfile+async.list
-	#vcs  -sdf max:top.clock:ss.sdf -LDFLAGS -Wl,--no-as-needed -debug_access+r -f list.f +lint=PCWM -v2005 +optconfigfile+async.list
+typ:
+	vcs -sdf typ:top.clock:clock_net.sdf -LDFLAGS -Wl,--no-as-needed -debug_access+r -f net_list.f +lint=PCWM -v2005 +optconfigfile+async.list +neg_tchk
+min:
+	vcs -sdf min:top.clock:clock_net.sdf -LDFLAGS -Wl,--no-as-needed -debug_access+r -f net_list.f +lint=PCWM -v2005 +optconfigfile+async.list +neg_tchk
+max:
+	vcs -sdf max:top.clock:clock_net.sdf -LDFLAGS -Wl,--no-as-needed -debug_access+r -f net_list.f +lint=PCWM -v2005 +optconfigfile+async.list +neg_tchk
+
 clean:
 	rm 	csrc/  simv  simv.daidir/ DVEfiles/ inter.vpd ucli.key -rf
 

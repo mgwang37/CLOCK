@@ -25,8 +25,8 @@ module top;
 	);
 
 	initial begin
-		target_clock = 2000;
-		ref_counter =  10;
+		target_clock = 8000;
+		ref_counter  = 10;
 		init = 20;
 		clk = 0;
 		resetn = 0;

@@ -26,7 +26,7 @@ module clock_ctl
 
 	always @(posedge clk or negedge resetn)begin
 		if (!resetn)begin
-			en_reg[511:0] <= 512'h1 << 511;
+			en_reg[511:0] <= 512'h1 << 510;
 		end else if (shift[1]) begin
 			if (shift[0])begin
 				if (!en_reg[511]) en_reg <= en_reg << 1; 
