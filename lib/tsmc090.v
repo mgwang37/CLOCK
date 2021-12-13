@@ -7496,10 +7496,10 @@ input A, B;
   specify
     // delay parameters
     specparam
-      tplh$A$Y = 1.0,
-      tphl$A$Y = 1.0,
-      tplh$B$Y = 1.0,
-      tphl$B$Y = 1.0;
+      tplh$A$Y = 0.07,
+      tphl$A$Y = 0.07,
+      tplh$B$Y = 0.07,
+      tphl$B$Y = 0.07;
 
     // path delays
     (A *> Y) = (tplh$A$Y, tphl$A$Y);
@@ -7972,8 +7972,8 @@ input A;
   specify
     // delay parameters
     specparam
-      tplh$A$Y = 1.0,
-      tphl$A$Y = 1.0;
+      tplh$A$Y = 0.07,
+      tphl$A$Y = 0.07;
 
     // path delays
     (A *> Y) = (tplh$A$Y, tphl$A$Y);
@@ -8849,10 +8849,10 @@ input A, B;
   specify
     // delay parameters
     specparam
-      tplh$A$Y = 1.0,
-      tphl$A$Y = 1.0,
-      tplh$B$Y = 1.0,
-      tphl$B$Y = 1.0;
+      tplh$A$Y = 0.07,
+      tphl$A$Y = 0.07,
+      tplh$B$Y = 0.07,
+      tphl$B$Y = 0.07;
 
     // path delays
     (A *> Y) = (tplh$A$Y, tphl$A$Y);
@@ -17882,10 +17882,10 @@ input A, B;
   specify
     // delay parameters
     specparam
-      tplh$A$Y = 1.0,
-      tphl$A$Y = 1.0,
-      tplh$B$Y = 1.0,
-      tphl$B$Y = 1.0;
+      tplh$A$Y = 0.07,
+      tphl$A$Y = 0.07,
+      tplh$B$Y = 0.07,
+      tphl$B$Y = 0.07;
 
     // path delays
     (A *> Y) = (tplh$A$Y, tphl$A$Y);
@@ -18833,14 +18833,14 @@ input A, B, C, D;
   specify
     // delay parameters
     specparam
-      tplh$A$Y = 1.0,
-      tphl$A$Y = 1.0,
-      tplh$B$Y = 1.0,
-      tphl$B$Y = 1.0,
-      tplh$C$Y = 1.0,
-      tphl$C$Y = 1.0,
-      tplh$D$Y = 1.0,
-      tphl$D$Y = 1.0;
+      tplh$A$Y = 0.07,
+      tphl$A$Y = 0.07,
+      tplh$B$Y = 0.07,
+      tphl$B$Y = 0.07,
+      tplh$C$Y = 0.07,
+      tphl$C$Y = 0.07,
+      tplh$D$Y = 0.07,
+      tphl$D$Y = 0.07;
 
     // path delays
     (A *> Y) = (tplh$A$Y, tphl$A$Y);
@@ -22553,10 +22553,10 @@ input A, B;
   specify
     // delay parameters
     specparam
-      tplh$A$Y = 1.0,
-      tphl$A$Y = 1.0,
-      tplh$B$Y = 1.0,
-      tphl$B$Y = 1.0;
+      tplh$A$Y = 0.07,
+      tphl$A$Y = 0.07,
+      tplh$B$Y = 0.07,
+      tphl$B$Y = 0.07;
 
     // path delays
     (A *> Y) = (tplh$A$Y, tphl$A$Y);
@@ -23113,14 +23113,14 @@ input A, B, C, D;
   specify
     // delay parameters
     specparam
-      tplh$A$Y = 1.0,
-      tphl$A$Y = 1.0,
-      tplh$B$Y = 1.0,
-      tphl$B$Y = 1.0,
-      tplh$C$Y = 1.0,
-      tphl$C$Y = 1.0,
-      tplh$D$Y = 1.0,
-      tphl$D$Y = 1.0;
+      tplh$A$Y = 0.07,
+      tphl$A$Y = 0.07,
+      tplh$B$Y = 0.07,
+      tphl$B$Y = 0.07,
+      tplh$C$Y = 0.07,
+      tphl$C$Y = 0.07,
+      tplh$D$Y = 0.07,
+      tphl$D$Y = 0.07;
 
     // path delays
     (A *> Y) = (tplh$A$Y, tphl$A$Y);

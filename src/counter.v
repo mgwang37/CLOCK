@@ -5,7 +5,7 @@ module counter
 	input           resetn,
 
 	input           clk,
-	input  [ 31:0]  threshold,
+	input  [ 15:0]  threshold,
 	input           clk_out,
 	output          out
 );

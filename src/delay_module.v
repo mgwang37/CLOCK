@@ -33,7 +33,7 @@ module delay_module
     generate
         for (i=0; i<128; i=i+1)
         begin:l1
-			OR4X1 lever1
+			OR4X8 lever1
 			(
 				.A(net1[i*4]),
 				.B(net1[i*4+1]),
@@ -47,7 +47,7 @@ module delay_module
     generate
         for (i=0; i<32; i=i+1)
         begin:l2
-			OR4X1 lever2
+			OR4X8 lever2
 			(
 				.A(net2[i*4]),
 				.B(net2[i*4+1]),
@@ -61,7 +61,7 @@ module delay_module
     generate
         for (i=0; i<8; i=i+1)
         begin:l3
-			OR4X1 lever3
+			OR4X8 lever3
 			(
 				.A(net3[i*4]),
 				.B(net3[i*4+1]),
@@ -75,7 +75,7 @@ module delay_module
     generate
         for (i=0; i<2; i=i+1)
         begin:l4
-			OR4X1 lever4
+			OR4X8 lever4
 			(
 				.A(net4[i*4]),
 				.B(net4[i*4+1]),
@@ -86,7 +86,7 @@ module delay_module
         end
     endgenerate
 
-	OR2X1 lever5
+	OR2X4 lever5
 	(
 		.A(net5[0]),
 		.B(net5[1]),

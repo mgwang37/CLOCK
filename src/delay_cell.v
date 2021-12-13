@@ -8,7 +8,7 @@ module delay_cell
 	output        out
 );
 
-	CLKBUFX2  bu  (.A(prev), .Y(next));
-	CLKAND2X2 swi (.A(next), .B(en), .Y(out));
+	CLKBUFX40  bu (.A(prev), .Y(next));
+	CLKAND2X12 swi (.A(next), .B(en), .Y(out));
 
 endmodule

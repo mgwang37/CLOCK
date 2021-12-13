@@ -1,2 +1,0 @@
-
-instance {top.clock.ctl.pcount.\out_reg_ok_reg[0]}  {noTiming};

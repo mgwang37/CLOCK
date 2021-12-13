@@ -5,10 +5,10 @@ module clock_ctl
 	input           resetn,
 
 	input           ref_clk,
-	input  [ 31:0]  ref_counter,
+	input  [ 15:0]  ref_counter,
 
 	input  [  8:0]  init,
-	input  [ 31:0]  counter,
+	input  [ 15:0]  counter,
 
 	input           clk,
 	output [  2:0]  status,

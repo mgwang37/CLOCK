@@ -8,7 +8,7 @@ module oscillator
 );
 	wire p_in;
 
-	CLKNAND2X4 p_not(.A(resetn), .B(out), .Y(p_in));
+	CLKNAND2X8 p_not(.A(resetn), .B(out), .Y(p_in));
 
 	delay_module delay
 	(

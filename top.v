@@ -3,8 +3,8 @@
 
 module top;
     reg         resetn;
-    reg [31:0]  target_clock;
-    reg [31:0]  ref_counter;
+    reg [15:0]  target_clock;
+    reg [15:0]  ref_counter;
     reg [ 8:0]  init;
     reg         clk;
     wire [2:0]  status;
@@ -25,7 +25,7 @@ module top;
 	);
 
 	initial begin
-		target_clock = 5000;
+		target_clock = 6000;
 		ref_counter  = 10;
 		init = 20;
 		clk = 0;
@@ -33,6 +33,7 @@ module top;
 		#100000;
 		resetn = 1;
 		@(status[2] |status[1])
+		#100000;
 		$stop;
 	end
 
